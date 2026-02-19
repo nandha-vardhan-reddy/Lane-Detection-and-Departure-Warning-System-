@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lane Departure Warning System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>Lane Departure Warning System</h1>
+        <p>Upload a road image or video to detect lane departure</p>
+    </div>
+
+    <!-- INPUT SECTION -->
+    <div class="input-section">
+        <input type="file" id="fileInput" accept="image/*,video/*">
+        
+        <select id="mode">
+            <option value="basic">Basic (OpenCV)</option>
+            <option value="ai">AI Mode (Coming Soon)</option>
+        </select>
+
+        <button onclick="processFile()">Process</button>
+    </div>
+
+    <!-- DIVIDER -->
+    <hr id="divider" style="display:none;">
+
+    <!-- RESULTS SECTION -->
+    <div class="results-section" id="results">
+        
+        <div class="output-container">
+            <div>
+                <h3>Original</h3>
+                <img id="originalOutput">
+            </div>
+
+            <div>
+                <h3>Processed</h3>
+                <img id="processedOutput">
+            </div>
+        </div>
+
+        <div id="statusBox"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
